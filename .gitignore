@@ -2,6 +2,12 @@
 
 # dependencies
 node_modules/
+.npm-cache/
+.gradle/
+.private/
+server/data/
+*.epub
+*.pdf
 
 # Expo
 .expo/
@@ -31,7 +37,42 @@ yarn-error.*
 *.pem
 
 # local env files
-.env*.local
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# local data, credentials, logs and release/transfer artifacts
+*.log
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.keystore
+*.pfx
+*.crt
+*.apk
+*.aab
+*.ipa
+*.zip
+*.tar
+*.tgz
+*.gz
+*.7z
+*.rar
+/build/
+/coverage/
+/migration-*/
+/deliverables/
+/reference/
+*-transfer.json
+*-upload-identity.json
+*-xattrs*.json
+
+# local assistant settings
+/.claude/
 
 # typescript
 *.tsbuildinfo

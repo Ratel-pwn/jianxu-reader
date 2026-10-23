@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "jianxu-mobile",
+    "name": "简续",
     "slug": "jianxu-mobile",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jianxu.reader"
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +17,21 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.jianxu.reader",
+      "allowBackup": false
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      "@config-plugins/react-native-pdf",
+      "@config-plugins/react-native-blob-util"
+    ],
+    "scheme": "jianxu",
+    "platforms": [
+      "ios",
+      "android"
+    ]
   }
 }
